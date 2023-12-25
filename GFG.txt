@@ -1,0 +1,24 @@
+HashSet<Integer> hs = new HashSet<>();
+        HashSet<Integer> temp = new HashSet<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i=0; i < arr.length; i++){
+            
+            if(!hs.add(arr[i]) ){
+                temp.add(arr[i]);
+            }
+        }
+        int temparr[]=new int[temp.size()];
+        int i=0;
+        for(int val : temp){
+                temparr[i++]=val;
+        }
+        
+        Arrays.sort(temparr);
+        for(int val: temparr){
+            list.add(val);
+        }
+        if(list.size()==0){
+            list.add(-1);
+        }
+          return list;
