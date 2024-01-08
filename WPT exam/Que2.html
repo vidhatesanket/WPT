@@ -1,0 +1,44 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(() => {
+            let text = $("#name").val();
+            let option = $("#sl").val();
+            let result = "";
+            
+            switch (option) {
+                case "B":
+                    result = `<b>${text}</b>`;
+                    break;
+                case "I":
+                    result = `<i>${text}</i>`;
+                    break;
+                case "U":
+                    result = `<u>${text}</u>`;
+                    break;
+                case "BIU":
+                    result = `<b><i><u>${text}</u></i></b>`;
+                    break;
+                default:
+                    break;
+            }
+            
+            $("#result").html(result);
+        })
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter the text" id="name">
+    <select id="sl">
+        <option value="B">B</option>
+        <option value="I">I</option>
+        <option value="U">U</option>
+        <option value="BIU">BIU</option>
+    </select>
+    <h2 id="result"></h2>
+    <b>Sanket</b>
+</body>
+</html>  
