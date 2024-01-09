@@ -4,7 +4,7 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script>
-        $(() => {
+        $().ready(() => {
             let text = $("#name").val();
             let option = $("#sl").val();
             let result = "";
@@ -33,12 +33,12 @@
 <body>
     <input type="text" placeholder="Enter the text" id="name">
     <select id="sl">
-        <option value="B">B</option>
-        <option value="I">I</option>
-        <option value="U">U</option>
-        <option value="BIU">BIU</option>
+        <option>B</option>
+        <option>I</option>
+        <option>U</option>
+        <option>BIU</option>
     </select>
-    <h2 id="result"></h2>
-    <b>Sanket</b>
+    <div id="result"></div>
+  
 </body>
 </html>  
